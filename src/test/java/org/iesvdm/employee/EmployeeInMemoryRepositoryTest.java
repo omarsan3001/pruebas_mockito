@@ -9,6 +9,8 @@ import java.util.List;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.mockito.Mock;
+import org.mockito.Mockito;
 
 /**
  * Test doubles that are "fakes" must be tested
@@ -36,7 +38,11 @@ public class EmployeeInMemoryRepositoryTest {
 	 */
 	@Test
 	public void testEmployeeRepositoryFindAll() {
-
+		Employee employee = Mockito.mock(Employee.class);
+		Employee employee2 = Mockito.mock(Employee.class);
+		employees.add(employee);
+		employees.add(employee2);
+		assertThat(employeeRepository.findAll()).containsExactly(employee, employee2);
 	}
 
 	/**
@@ -47,7 +53,9 @@ public class EmployeeInMemoryRepositoryTest {
 	 */
 	@Test
 	public void testEmployeeRepositorySaveNewEmployee() {
-
+		Employee employee = Mockito.mock(Employee.class);
+		employeeRepository.save(employee);
+		assertThat(employees).containsExactly(employee);
 	}
 
 	/**
@@ -61,6 +69,15 @@ public class EmployeeInMemoryRepositoryTest {
 	 */
 	@Test
 	public void testEmployeeRepositorySaveExistingEmployee() {
+		Employee employee = Mockito.spy(new Employee("a",20));
+		Employee employee2 = Mockito.spy(new Employee("b",30));
+		employees.add(employee);
+		employees.add(employee2);
+		employee.setSalary(1000);
+		employee2.setSalary(2000);
+		employeeRepository.save(employee);
+		employeeRepository.save(employee2);
+		assertThat(employees).containsExactly(employee, employee2);
 
 	}
 }
