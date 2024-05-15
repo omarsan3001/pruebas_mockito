@@ -121,6 +121,7 @@ public class EmployeeManagerTest {
 		InOrder inOrder = inOrder(bankService);
 		inOrder.verify(bankService, times(1)).pay("1", 100.0);
 		inOrder.verify(bankService, times(1)).pay("2", 2000.0);
+		verifyNoMoreInteractions(bankService);
 	}
 
 	/**

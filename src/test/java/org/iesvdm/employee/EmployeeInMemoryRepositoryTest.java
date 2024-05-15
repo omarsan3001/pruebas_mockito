@@ -56,6 +56,7 @@ public class EmployeeInMemoryRepositoryTest {
 		Employee employee = Mockito.mock(Employee.class);
 		employeeRepository.save(employee);
 		assertThat(employees).containsExactly(employee);
+
 	}
 
 	/**
