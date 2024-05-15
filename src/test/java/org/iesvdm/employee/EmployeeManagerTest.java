@@ -2,6 +2,7 @@ package org.iesvdm.employee;
 
 import static java.util.Arrays.asList;
 import static org.assertj.core.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.mockito.ArgumentMatchers.argThat;
 import static org.mockito.Mockito.*;
 
@@ -76,7 +77,6 @@ public class EmployeeManagerTest {
 		assertThat(employeeManager.payEmployees()).isOne();
 		verify(bankService, times(1)).pay("1", 100.0);
 	}
-
 
 	/**
 	 * Descripcion del test:
@@ -178,7 +178,14 @@ public class EmployeeManagerTest {
 	 */
 	@Test
 	public void testEmployeeSetPaidIsCalledAfterPaying() {
-
+		List lista = new ArrayList<Employee>();
+		lista.add(toBePaid);
+		when(employeeRepository.findAll()).thenReturn(lista);
+		employeeManager.payEmployees();
+		verify(bankService, times(1)).pay("2", 2000);
+		InOrder inOrder = inOrder(bankService,toBePaid);
+		inOrder.verify(bankService).pay("2",2000);
+		inOrder.verify(toBePaid).setPaid(true);
 	}
 
 
@@ -196,7 +203,12 @@ public class EmployeeManagerTest {
 	 */
 	@Test
 	public void testPayEmployeesWhenBankServiceThrowsException() {
-
+		List lista = new ArrayList<Employee>();
+		lista.add(notToBePaid);
+		when(employeeRepository.findAll()).thenReturn(lista);
+		doThrow(RuntimeException.class).when(bankService).pay(anyString(),anyDouble());
+		employeeManager.payEmployees();
+		verify(notToBePaid).setPaid(false);
 	}
 
 	/**
@@ -214,6 +226,15 @@ public class EmployeeManagerTest {
 	 */
 	@Test
 	public void testOtherEmployeesArePaidWhenBankServiceThrowsException() {
+		List lista = new ArrayList<Employee>();
+		lista.add(notToBePaid);
+		lista.add(toBePaid);
+		when(employeeRepository.findAll()).thenReturn(lista);
+		doThrow(RuntimeException.class).doNothing().when(bankService).pay(anyString(),anyDouble());
+		employeeManager.payEmployees();
+		verify(notToBePaid).setPaid(false);
+		verify(toBePaid).setPaid(true);
+
 	}
 
 
@@ -233,7 +254,14 @@ public class EmployeeManagerTest {
 	 */
 	@Test
 	public void testArgumentMatcherExample() {
-
+		List lista = new ArrayList<Employee>();
+		lista.add(notToBePaid);
+		lista.add(toBePaid);
+		when(employeeRepository.findAll()).thenReturn(lista);
+		doThrow(RuntimeException.class).when(bankService).pay(argThat(s -> s.equals("1")),anyDouble());
+		employeeManager.payEmployees();
+		verify(notToBePaid).setPaid(false);
+		verify(toBePaid).setPaid(true);
 	}
 
 }

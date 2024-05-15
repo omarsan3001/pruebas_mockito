@@ -9,10 +9,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5c399beb-7381-4adb-ab43-564baa14b56b" name="Changes" comment="Actualizaciones a la teoría de mockito">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/img.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/img_1.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/iesvdm/employee/EmployeeInMemoryRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/iesvdm/employee/EmployeeInMemoryRepositoryTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/iesvdm/employee/EmployeeManagerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/iesvdm/employee/EmployeeManagerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -35,18 +32,18 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "omarsan3001"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;omarsan3001&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/omarsan3001/pruebas_mockito.git",
-    "accountId": "7d84e598-fd86-4900-b47a-ed3099e9bcb3"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/omarsan3001/pruebas_mockito.git&quot;,
+    &quot;accountId&quot;: &quot;7d84e598-fd86-4900-b47a-ed3099e9bcb3&quot;
   }
-}]]></component>
+}</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="jar://$MAVEN_REPOSITORY$/org/mockito/mockito-core/5.11.0/mockito-core-5.11.0-sources.jar!/org/mockito/ArgumentMatchers.java" root0="SKIP_INSPECTION" />
   </component>
@@ -65,10 +62,13 @@
     "JUnit.EmployeeInMemoryRepositoryTest.testEmployeeRepositoryFindAll.executor": "Run",
     "JUnit.EmployeeInMemoryRepositoryTest.testEmployeeRepositorySaveExistingEmployee.executor": "Run",
     "JUnit.EmployeeInMemoryRepositoryTest.testEmployeeRepositorySaveNewEmployee.executor": "Run",
+    "JUnit.EmployeeManagerTest.testEmployeeSetPaidIsCalledAfterPaying.executor": "Run",
     "JUnit.EmployeeManagerTest.testExampleOfInOrderWithTwoMocks.executor": "Run",
+    "JUnit.EmployeeManagerTest.testOtherEmployeesArePaidWhenBankServiceThrowsException.executor": "Run",
     "JUnit.EmployeeManagerTest.testPayEmployeesInOrderWhenSeveralEmployeeArePresent.executor": "Run",
     "JUnit.EmployeeManagerTest.testPayEmployeesReturnOneWhenOneEmployeeIsPresentAndBankServicePayPaysThatEmployee.executor": "Run",
     "JUnit.EmployeeManagerTest.testPayEmployeesReturnZeroWhenNoEmployeesArePresent.executor": "Run",
+    "JUnit.EmployeeManagerTest.testPayEmployeesWhenBankServiceThrowsException.executor": "Run",
     "JUnit.EmployeeManagerTest.testPayEmployeesWhenSeveralEmployeeArePresent.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -99,7 +99,39 @@
       <recent name="org.iesvdm.dominio" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.EmployeeManagerTest.testExampleOfInOrderWithTwoMocks">
+  <component name="RunManager" selected="JUnit.EmployeeManagerTest.testArgumentMatcherExample">
+    <configuration name="EmployeeManagerTest.testArgumentMatcherExample" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="proyecto_mockito" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.iesvdm.employee.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.iesvdm.employee" />
+      <option name="MAIN_CLASS_NAME" value="org.iesvdm.employee.EmployeeManagerTest" />
+      <option name="METHOD_NAME" value="testArgumentMatcherExample" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EmployeeManagerTest.testEmployeeSetPaidIsCalledAfterPaying" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="proyecto_mockito" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.iesvdm.employee.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.iesvdm.employee" />
+      <option name="MAIN_CLASS_NAME" value="org.iesvdm.employee.EmployeeManagerTest" />
+      <option name="METHOD_NAME" value="testEmployeeSetPaidIsCalledAfterPaying" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="EmployeeManagerTest.testExampleOfInOrderWithTwoMocks" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="proyecto_mockito" />
       <extension name="coverage">
@@ -116,7 +148,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="EmployeeManagerTest.testPayEmployeesInOrderWhenSeveralEmployeeArePresent" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="EmployeeManagerTest.testOtherEmployeesArePaidWhenBankServiceThrowsException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="proyecto_mockito" />
       <extension name="coverage">
         <pattern>
@@ -126,13 +158,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="org.iesvdm.employee" />
       <option name="MAIN_CLASS_NAME" value="org.iesvdm.employee.EmployeeManagerTest" />
-      <option name="METHOD_NAME" value="testPayEmployeesInOrderWhenSeveralEmployeeArePresent" />
+      <option name="METHOD_NAME" value="testOtherEmployeesArePaidWhenBankServiceThrowsException" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="EmployeeManagerTest.testPayEmployeesReturnOneWhenOneEmployeeIsPresentAndBankServicePayPaysThatEmployee" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="EmployeeManagerTest.testPayEmployeesWhenBankServiceThrowsException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="proyecto_mockito" />
       <extension name="coverage">
         <pattern>
@@ -142,39 +174,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="org.iesvdm.employee" />
       <option name="MAIN_CLASS_NAME" value="org.iesvdm.employee.EmployeeManagerTest" />
-      <option name="METHOD_NAME" value="testPayEmployeesReturnOneWhenOneEmployeeIsPresentAndBankServicePayPaysThatEmployee" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="EmployeeManagerTest.testPayEmployeesReturnZeroWhenNoEmployeesArePresent" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="proyecto_mockito" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.iesvdm.employee.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.iesvdm.employee" />
-      <option name="MAIN_CLASS_NAME" value="org.iesvdm.employee.EmployeeManagerTest" />
-      <option name="METHOD_NAME" value="testPayEmployeesReturnZeroWhenNoEmployeesArePresent" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="EmployeeManagerTest.testPayEmployeesWhenSeveralEmployeeArePresent" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="proyecto_mockito" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.iesvdm.employee.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.iesvdm.employee" />
-      <option name="MAIN_CLASS_NAME" value="org.iesvdm.employee.EmployeeManagerTest" />
-      <option name="METHOD_NAME" value="testPayEmployeesWhenSeveralEmployeeArePresent" />
+      <option name="METHOD_NAME" value="testPayEmployeesWhenBankServiceThrowsException" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -182,11 +182,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.EmployeeManagerTest.testArgumentMatcherExample" />
+        <item itemvalue="JUnit.EmployeeManagerTest.testOtherEmployeesArePaidWhenBankServiceThrowsException" />
+        <item itemvalue="JUnit.EmployeeManagerTest.testPayEmployeesWhenBankServiceThrowsException" />
+        <item itemvalue="JUnit.EmployeeManagerTest.testEmployeeSetPaidIsCalledAfterPaying" />
         <item itemvalue="JUnit.EmployeeManagerTest.testExampleOfInOrderWithTwoMocks" />
-        <item itemvalue="JUnit.EmployeeManagerTest.testPayEmployeesInOrderWhenSeveralEmployeeArePresent" />
-        <item itemvalue="JUnit.EmployeeManagerTest.testPayEmployeesWhenSeveralEmployeeArePresent" />
-        <item itemvalue="JUnit.EmployeeManagerTest.testPayEmployeesReturnOneWhenOneEmployeeIsPresentAndBankServicePayPaysThatEmployee" />
-        <item itemvalue="JUnit.EmployeeManagerTest.testPayEmployeesReturnZeroWhenNoEmployeesArePresent" />
       </list>
     </recent_temporary>
   </component>
@@ -212,7 +212,14 @@
       <workItem from="1712905273657" duration="2892000" />
       <workItem from="1712940548762" duration="12792000" />
       <workItem from="1713177366619" duration="8742000" />
-      <workItem from="1715063956964" duration="3514000" />
+      <workItem from="1715063956964" duration="3793000" />
+      <workItem from="1715068511375" duration="653000" />
+      <workItem from="1715156662123" duration="14000" />
+      <workItem from="1715156683101" duration="4000" />
+      <workItem from="1715156692987" duration="51000" />
+      <workItem from="1715156919751" duration="2412000" />
+      <workItem from="1715334643422" duration="882000" />
+      <workItem from="1715754152496" duration="2876000" />
     </task>
     <task id="LOCAL-00001" summary="inicial">
       <option name="closed" value="true" />
@@ -246,7 +253,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713253920554</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Actualizaciones a la teoría de mockito">
+      <option name="closed" value="true" />
+      <created>1715067502410</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1715067502410</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
